@@ -1,0 +1,51 @@
+<html>
+    <script>
+        const inventory = [
+            {first: "rahad", last: "saidul", year: 1995},
+            {first: "sohag", last: "jaidul", year: 1990},
+            {first: "nosu", last: "islam", year: 2005}
+        ]
+        // const numbers1 = [1, 2, 3, 4, 5];
+
+        // inventory.reduce(function(acc,inventor, index, array) {
+        //     console.log({acc, inventor, index, array});
+        //     return inventor;
+        // })
+        //let count = 0;
+        // for(let i = 0; i < inventory.length; i++) {
+        //     console.log(Object.apply(`year${++count}` + " " + inventory[i].year));
+        //     count++;
+        // }
+
+        const years= inventory.reduce((acc,curr,idx)=>{
+            const prop = `year${++idx}`;
+            return ({...acc,[prop]:curr['year']})
+        },{})
+        console.log(years)
+/// {year1:1995,year2:1990,year3:2005}
+        // const inventoryFilter = inventory.filter(function(inventor) {
+        //     if(inventor.year >= 1990 && inventor.year <= 2005) {
+        //         console.log(inventor.year, inventor.first);
+        //     }else {
+        //         console.log("false");
+        //     }
+        // });
+
+        // const inventoryMap = inventory.map(inventor => inventor.year >= 1990 && inventor.year <= 2005);
+        // console.log(inventoryMap);
+
+        // const inventorySort = inventory.sort(function(a, b) {
+        //     if(a.year > b.year) {
+        //         return 1;
+        //     } else {
+        //         return -1;
+        //     }
+        // });
+        // console.table(inventorySort);
+
+        // const totalYears = inventory.reduce((total, inventor) => {
+        //     return total + (inventor.passed - inventor.year);
+        // })
+        // console.log(totalYears);
+    </script>
+</html>

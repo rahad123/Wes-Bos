@@ -1,0 +1,27 @@
+<html>
+    <body>
+        <title>Reference vs Copy</title>
+        <script>
+            let age = 12;
+            let age2 = age;
+            console.log(age, age2);
+            age = 200;
+            console.log(age, age2);
+
+            let name = 'rahad';
+            let name2 = name;
+            console.log(name, name2);
+            name = 'wes';
+            console.log(name, name2);
+
+            const players = ['rahad', 'sohag'];
+            const team = players;
+            console.log(players, team);
+
+            const team2 = players.splice();
+            const team3 = Array.from(players);
+            const team4 = [].concat(players);
+
+        </script>
+    </body>
+</html>

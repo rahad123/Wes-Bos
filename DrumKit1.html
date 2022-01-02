@@ -1,0 +1,28 @@
+<html>
+    <body>
+        <div class="keys" id="demo">
+            <div data-key="65" class="key">
+                <kbd>A</kbd>
+                <span class="sound">clap</span>
+            </div>
+            <div data-key="66" class="key">
+                <kbd>A</kbd>
+                <span class="sound">clap</span>
+            </div>
+        </div>
+        <audio data-key="65" src="01 - JavaScript Drum Kit_sounds_boom.wav"></audio>
+        <audio data-key="66" src="01 - JavaScript Drum Kit_sounds_clap.wav"></audio>
+        <script>
+          window.addEventListener('keydown', function(e) {
+              const audio = document.querySelector(`audio[data-key=${e.keyCode}]`);
+              const  key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
+              if(!audio) {
+                  return;
+              }
+              audio.currentTime = 0;
+              audio.play();
+              console.log(key);
+          })
+        </script>
+    </body>
+</html>

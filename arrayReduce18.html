@@ -1,0 +1,13 @@
+<html>
+    <body>
+        <title>Reduce function implement</title>
+        <script>
+            let arr = [1, 2, 3, 4, 5];
+
+            arr.reduce(function(acc, first, index, array){
+                console.log(acc, first, index, array);
+                return ++acc;
+            }, 0)
+        </script>
+    </body>
+</html>

@@ -1,0 +1,29 @@
+<html>
+    <body>
+        <div class="clock" id="demo">
+            <div class="clock-face">
+                <div class="hand hour-hand"></div>
+                <div class="hand minute-hand"></div>
+                <div class="second-hand"></div>
+            </div>
+        </div>
+        <script>
+            const secondHand = document.querySelector('.second-hand');
+            function setDate() {
+                const now = new Date();
+                const seconds = now.getSeconds();
+                //const secondDegrees = ((seconds / 60) * 360) + 90;
+                
+                const mins = now.getMinutes();
+                //const minDegree = ((mins / 60) * 360) + 90;
+
+                const hour = now.getHours();
+                //const hourDegree = ((hour / 60) * 360) + 90;
+
+                //document.getElementById("demo").innerHTML = hourDegree;
+                //console.log(hourDegree, minDegree, secondDegrees);
+            }
+            setInterval(setDate, 10);
+        </script>
+    </body>
+</html>

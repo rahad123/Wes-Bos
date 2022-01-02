@@ -1,0 +1,31 @@
+<html>
+    <body>
+        <div class="wrapper">
+            <h2>local tapas</h2>
+            <ul class="plates">
+                <li>Loading tapas....</li>
+            </ul>
+            <form class="add-items">
+                <input type="text" name="item" placeholder="item-name" required>
+                <input type="submit" value="+ Add Item">
+            </form>
+        </div>
+            <script>
+             const addItems = document.querySelector('.add-items');
+             const itemList = document.querySelector('.plates');
+             const items = [];
+
+             function addItem(e) {
+                e.preventDefault();
+                const text = (this.querySelector('[name-item]')).value;
+                const item = {
+                    text: "item name",
+                    done: false
+                }
+             }
+
+             addItems.addEventLinstener('submit', addItem);
+            </script>
+            
+    </body>
+</html>
